@@ -9,24 +9,24 @@
 				 background-image: url("bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
     			overflow-x: hidden;
 			}
 			.spinner{
     width: 80px;
     height: 80px;
-    
+
     border: 2px solid #f3f3f3;
     border-top:3px solid #f25a41;
     border-radius: 100%;
-    
+
     position: absolute;
     top:0;
     bottom:0;
     left:0;
     right: 0;
     margin: auto;
-    
+
     animation: spin 1s infinite linear;
 }
 			#result{
@@ -58,7 +58,7 @@
 
 		<div id="result" align="center">
 			<br>
-		 <label style="font-size: 15px; color: black">Speech Input:</label>
+		 <label style="font-size: 15px; color: black"> Speech Input:</label>
       <form action = "http://localhost:5000/result" method = "POST">
         <input type="text" id="result1" size="40" maxlength=100 name = "Name" /></br>
 <br>
@@ -68,19 +68,19 @@
 	</br>
          <p><input type = "submit" value = "submit" /></p>
       </form>
-      
+
 		<script type="text/javascript">
-		
+
 		var overlay = document.getElementById("overlay");
-		
-		
+
+
 			var r = document.getElementById('result1');
 			var speechRecognizer = new webkitSpeechRecognition();// a new speech recognition object
-			
+
 			//function to start listening to voice and then convert it to text
 			function startConverting () {
 				if('webkitSpeechRecognition' in window){
-					
+
 					speechRecognizer.continuous = true;
 					speechRecognizer.interimResults = true;
 					speechRecognizer.lang = 'en-IN';
@@ -110,7 +110,7 @@
 			{
 				speechRecognizer.stop();
 			}
-		
+
 		</script>
 		<br>
     </br>
